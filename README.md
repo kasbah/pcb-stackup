@@ -220,3 +220,17 @@ Browser tests are run with [Zuul](https://github.com/defunctzombie/zuul) and [Sa
 * `$ npm run test:browser` - run the unit tests in a local browser
 * `$ npm run test:sauce` - run the units tests in several browsers using Open Sauce (Sauce Labs account and local
 [.zuulrc](https://github.com/defunctzombie/zuul/wiki/Zuulrc) required)
+<a name="pcbStackup"></a>
+
+## pcbStackup(layers, options, done) ⇒ <code>any</code>
+The pcb-stackup converter function.
+
+**Kind**: global function  
+**Returns**: <code>any</code> - - Whatever the last callback returned  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| layers | <code>string</code> | Array of layer objects |
+| options | <code>string</code> | Options or a callback function |
+| done | <code>string</code> | Array of layer objects |
+
