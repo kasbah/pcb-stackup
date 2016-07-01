@@ -5,17 +5,17 @@ PCB Stackup
 
 
 * [pcb-stackup](#module_pcb-stackup)
-    * [module.exports(layers, [options], done)](#exp_module_pcb-stackup--module.exports) ⇒ <code>any</code> ⏏
-        * [~Layer](#module_pcb-stackup--module.exports..Layer) : <code>Object</code>
-        * [~Callback](#module_pcb-stackup--module.exports..Callback) : <code>function</code>
-        * [~Stackup](#module_pcb-stackup--module.exports..Stackup) : <code>Object</code>
+    * [~pcbStackup(layers, [options], done)](#module_pcb-stackup..pcbStackup) ⇒ <code>any</code>
+    * [~Layer](#module_pcb-stackup..Layer) : <code>Object</code>
+    * [~Callback](#module_pcb-stackup..Callback) : <code>function</code>
+    * [~Stackup](#module_pcb-stackup..Stackup) : <code>Object</code>
 
-<a name="exp_module_pcb-stackup--module.exports"></a>
+<a name="module_pcb-stackup..pcbStackup"></a>
 
-### module.exports(layers, [options], done) ⇒ <code>any</code> ⏏
+### pcb-stackup~pcbStackup(layers, [options], done) ⇒ <code>any</code>
 The pcb-stackup converter function.
 
-**Kind**: Exported function  
+**Kind**: inner method of <code>[pcb-stackup](#module_pcb-stackup)</code>  
 **Returns**: <code>any</code> - Whatever the "done" callback returns  
 
 | Param | Type | Description |
@@ -24,10 +24,10 @@ The pcb-stackup converter function.
 | [options] | <code>Options</code> | Optional options, see [pcb-stackup-core-docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options) |
 | done | <code>Callback</code> | Callback function |
 
-<a name="module_pcb-stackup--module.exports..Layer"></a>
+<a name="module_pcb-stackup..Layer"></a>
 
-#### module.exports~Layer : <code>Object</code>
-**Kind**: inner typedef of <code>[module.exports](#exp_module_pcb-stackup--module.exports)</code>  
+### pcb-stackup~Layer : <code>Object</code>
+**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
 **Properties**
 
 | Name | Type | Description |
@@ -36,20 +36,20 @@ The pcb-stackup converter function.
 | filename | <code>string</code> | The filename so we can try and identify the type of the layer |
 | layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names) |
 
-<a name="module_pcb-stackup--module.exports..Callback"></a>
+<a name="module_pcb-stackup..Callback"></a>
 
-#### module.exports~Callback : <code>function</code>
-**Kind**: inner typedef of <code>[module.exports](#exp_module_pcb-stackup--module.exports)</code>  
+### pcb-stackup~Callback : <code>function</code>
+**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
 | error | <code>Error</code> | Error if something goes wrong |
 | stackup | <code>Stackup</code> | The stackup data |
 
-<a name="module_pcb-stackup--module.exports..Stackup"></a>
+<a name="module_pcb-stackup..Stackup"></a>
 
-#### module.exports~Stackup : <code>Object</code>
-**Kind**: inner typedef of <code>[module.exports](#exp_module_pcb-stackup--module.exports)</code>  
+### pcb-stackup~Stackup : <code>Object</code>
+**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
 **Properties**
 
 | Name | Type | Description |

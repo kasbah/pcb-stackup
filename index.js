@@ -32,7 +32,7 @@ var getInvalidLayers = function(layers) {
  * @param {Callback} done Callback function
  * @return {any} Whatever the "done" callback returns
 */
-module.exports = function pcbStackup(layers, options, done) {
+function pcbStackup(layers, options, done) {
   if (typeof options === 'function') {
     done = options
     options = {}
@@ -87,6 +87,8 @@ module.exports = function pcbStackup(layers, options, done) {
     })
   })
 }
+
+module.exports = pcbStackup
 
 /**
  * @typedef Layer
