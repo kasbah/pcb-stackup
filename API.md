@@ -39,7 +39,7 @@ The pcb-stackup converter function.
 
 | Name | Type | Description |
 | --- | --- | --- |
-| gerber | <code>string</code> &#124; <code>NodeJS.ReadableStream</code> | The gerber data |
+| gerber | <code>string</code> &#124; <code>NodeJS.ReadableStream</code> | The gerber data as a string or [ReadableStream](https://nodejs.org/api/stream.html#stream_readable_streams) |
 | filename | <code>string</code> | The filename so we can try and identify the type of the layer. You either have to provide this or the layerType. |
 | layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names). |
 

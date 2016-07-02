@@ -90,7 +90,9 @@ module.exports = pcbStackup
 /**
  * @typedef Layer
  * @type {object}
- * @property {string | NodeJS.ReadableStream} gerber The gerber data
+ * @property {string | NodeJS.ReadableStream} gerber The gerber data as a
+ * string or [ReadableStream]{@link
+ * https://nodejs.org/api/stream.html#stream_readable_streams}
  * @property {string} [filename] The filename so we can try and identify the
  * type of the layer. You either have to provide this or the layerType.
  * @property {string} [layerType] The layer type, a valid layer type as given
