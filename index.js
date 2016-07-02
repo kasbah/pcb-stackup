@@ -26,7 +26,7 @@ var getInvalidLayers = function(layers) {
  * @param {Options} [options={id: shortId.generate()}] Optional options, see
  * [pcb-stackup-core-docs]{@link
  * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options}.
- * @param {Callback} done Callback function.
+ * @param {Done} done Callback function.
  * @return {any} Whatever the "done" callback returns.
 */
 var pcbStackup = function(layers, options, done) {
@@ -101,7 +101,7 @@ module.exports = pcbStackup
 */
 
 /**
- * @typedef Callback
+ * @typedef Done
  * @type {function}
  * @param {Error} error Error if something goes wrong.
  * @param {Stackup} stackup The stackup data.

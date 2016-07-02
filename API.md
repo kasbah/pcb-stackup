@@ -11,7 +11,7 @@
 <dl>
 <dt><a href="#Layer">Layer</a> : <code>object</code></dt>
 <dd></dd>
-<dt><a href="#Callback">Callback</a> : <code>function</code></dt>
+<dt><a href="#Done">Done</a> : <code>function</code></dt>
 <dd></dd>
 <dt><a href="#Stackup">Stackup</a> : <code>object</code></dt>
 <dd></dd>
@@ -29,7 +29,7 @@ The pcb-stackup converter function.
 | --- | --- | --- | --- |
 | layers | <code>[array.&lt;Layer&gt;](#Layer)</code> |  | Array of layer objects |
 | [options] | <code>Options</code> | <code>{id: shortId.generate()}</code> | Optional options, see [pcb-stackup-core-docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options). |
-| done | <code>[Callback](#Callback)</code> |  | Callback function. |
+| done | <code>[Done](#Done)</code> |  | Callback function. |
 
 <a name="Layer"></a>
 
@@ -43,9 +43,9 @@ The pcb-stackup converter function.
 | filename | <code>string</code> | The filename so we can try and identify the type of the layer. You either have to provide this or the layerType. |
 | layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names). |
 
-<a name="Callback"></a>
+<a name="Done"></a>
 
-## Callback : <code>function</code>
+## Done : <code>function</code>
 **Kind**: global typedef  
 
 | Param | Type | Description |
