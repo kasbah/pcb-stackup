@@ -1,7 +1,4 @@
-/**
- * PCB Stackup
- * @module pcb-stackup
- */
+// pcb-stackup main
 'use strict'
 
 var gerberToSvg = require('gerber-to-svg')
@@ -26,13 +23,13 @@ var getInvalidLayers = function(layers) {
 /**
  * The pcb-stackup converter function.
  * @param {array<Layer>} layers Array of layer objects
- * @param {Options} [options] Optional options, see
+ * @param {Options} [options={id: shortId.generate()}] Optional options, see
  * [pcb-stackup-core-docs]{@link
- * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options}
- * @param {Callback} done Callback function
- * @return {any} Whatever the "done" callback returns
+ * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options}.
+ * @param {Callback} done Callback function.
+ * @return {any} Whatever the "done" callback returns.
 */
-function pcbStackup(layers, options, done) {
+var pcbStackup = function(layers, options, done) {
   if (typeof options === 'function') {
     done = options
     options = {}
@@ -95,28 +92,28 @@ module.exports = pcbStackup
  * @type {Object}
  * @property {string | NodeJS.ReadableStream} gerber The gerber data
  * @property {string} [filename] The filename so we can try and identify the
- * type of the layer
+ * type of the layer. You either have to provide this or the layerType.
  * @property {string} [layerType] The layer type, a valid layer type as given
  * by [whats-that-gerber]{@link
- * https://github.com/tracespace/whats-that-gerber#layer-types-and-names}
+ * https://github.com/tracespace/whats-that-gerber#layer-types-and-names}.
 */
 
 /**
  * @typedef Callback
  * @type {function}
- * @param {Error} error Error if something goes wrong
- * @param {Stackup} stackup The stackup data
+ * @param {Error} error Error if something goes wrong.
+ * @param {Stackup} stackup The stackup data.
 */
 
 /**
  * @typedef Stackup
  * @type {Object}
  * @property {Object} top The top view SVG object, see [pcb-stackup-core docs]{@link
- * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details
- * @property {string} top.svg The top SVG string
+ * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details.
+ * @property {string} top.svg The top SVG string.
  * @property {Object} bottom The bottom view SVG object, see [pcb-stackup-core docs]{@link
- * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details
- * @property {string} bottom.svg The bottom SVG string
- * @property {Array<Layer>} layers A cache of the processed layers that you can
- * pass back to pcbStackup
+ * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details.
+ * @property {string} bottom.svg The bottom SVG string.
+ * @property {Array<Layer>} layers A cache of the processed layers that can be
+ * passed back to pcbStackup.
 */

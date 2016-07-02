@@ -1,62 +1,69 @@
-<a name="module_pcb-stackup"></a>
+## Functions
 
-## pcb-stackup
-PCB Stackup
+<dl>
+<dt><a href="#pcbStackup">pcbStackup(layers, [options], done)</a> ⇒ <code>any</code></dt>
+<dd><p>The pcb-stackup converter function.</p>
+</dd>
+</dl>
 
+## Typedefs
 
-* [pcb-stackup](#module_pcb-stackup)
-    * [~pcbStackup(layers, [options], done)](#module_pcb-stackup..pcbStackup) ⇒ <code>any</code>
-    * [~Layer](#module_pcb-stackup..Layer) : <code>Object</code>
-    * [~Callback](#module_pcb-stackup..Callback) : <code>function</code>
-    * [~Stackup](#module_pcb-stackup..Stackup) : <code>Object</code>
+<dl>
+<dt><a href="#Layer">Layer</a> : <code>Object</code></dt>
+<dd></dd>
+<dt><a href="#Callback">Callback</a> : <code>function</code></dt>
+<dd></dd>
+<dt><a href="#Stackup">Stackup</a> : <code>Object</code></dt>
+<dd></dd>
+</dl>
 
-<a name="module_pcb-stackup..pcbStackup"></a>
+<a name="pcbStackup"></a>
 
-### pcb-stackup~pcbStackup(layers, [options], done) ⇒ <code>any</code>
+## pcbStackup(layers, [options], done) ⇒ <code>any</code>
 The pcb-stackup converter function.
 
-**Kind**: inner method of <code>[pcb-stackup](#module_pcb-stackup)</code>  
-**Returns**: <code>any</code> - Whatever the "done" callback returns  
+**Kind**: global function  
+**Returns**: <code>any</code> - Whatever the "done" callback returns.  
 
-| Param | Type | Description |
-| --- | --- | --- |
-| layers | <code>array.&lt;Layer&gt;</code> | Array of layer objects |
-| [options] | <code>Options</code> | Optional options, see [pcb-stackup-core-docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options) |
-| done | <code>Callback</code> | Callback function |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| layers | <code>[array.&lt;Layer&gt;](#Layer)</code> |  | Array of layer objects |
+| [options] | <code>Options</code> | <code>{id: shortId.generate()}</code> | Optional options, see [pcb-stackup-core-docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#options). |
+| done | <code>[Callback](#Callback)</code> |  | Callback function. |
 
-<a name="module_pcb-stackup..Layer"></a>
+<a name="Layer"></a>
 
-### pcb-stackup~Layer : <code>Object</code>
-**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
+## Layer : <code>Object</code>
+**Kind**: global typedef  
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
 | gerber | <code>string</code> &#124; <code>NodeJS.ReadableStream</code> | The gerber data |
-| filename | <code>string</code> | The filename so we can try and identify the type of the layer |
-| layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names) |
+| filename | <code>string</code> | The filename so we can try and identify the type of the layer. You either have to provide this or the layerType. |
+| layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names). |
 
-<a name="module_pcb-stackup..Callback"></a>
+<a name="Callback"></a>
 
-### pcb-stackup~Callback : <code>function</code>
-**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
+## Callback : <code>function</code>
+**Kind**: global typedef  
 
 | Param | Type | Description |
 | --- | --- | --- |
-| error | <code>Error</code> | Error if something goes wrong |
-| stackup | <code>Stackup</code> | The stackup data |
+| error | <code>Error</code> | Error if something goes wrong. |
+| stackup | <code>[Stackup](#Stackup)</code> | The stackup data. |
 
-<a name="module_pcb-stackup..Stackup"></a>
+<a name="Stackup"></a>
 
-### pcb-stackup~Stackup : <code>Object</code>
-**Kind**: inner typedef of <code>[pcb-stackup](#module_pcb-stackup)</code>  
+## Stackup : <code>Object</code>
+**Kind**: global typedef  
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| top | <code>Object</code> | The top view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details |
-| top.svg | <code>string</code> | The top SVG string |
-| bottom | <code>Object</code> | The bottom view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details |
-| bottom.svg | <code>string</code> | The bottom SVG string |
-| layers | <code>Array.&lt;Layer&gt;</code> | A cache of the processed layers that you can pass back to pcbStackup |
+| top | <code>Object</code> | The top view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
+| top.svg | <code>string</code> | The top SVG string. |
+| bottom | <code>Object</code> | The bottom view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
+| bottom.svg | <code>string</code> | The bottom SVG string. |
+| layers | <code>[Array.&lt;Layer&gt;](#Layer)</code> | A cache of the processed layers that can be passed back to pcbStackup. |
 
