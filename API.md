@@ -9,11 +9,11 @@
 ## Typedefs
 
 <dl>
-<dt><a href="#Layer">Layer</a> : <code>Object</code></dt>
+<dt><a href="#Layer">Layer</a> : <code>object</code></dt>
 <dd></dd>
 <dt><a href="#Callback">Callback</a> : <code>function</code></dt>
 <dd></dd>
-<dt><a href="#Stackup">Stackup</a> : <code>Object</code></dt>
+<dt><a href="#Stackup">Stackup</a> : <code>object</code></dt>
 <dd></dd>
 </dl>
 
@@ -33,7 +33,7 @@ The pcb-stackup converter function.
 
 <a name="Layer"></a>
 
-## Layer : <code>Object</code>
+## Layer : <code>object</code>
 **Kind**: global typedef  
 **Properties**
 
@@ -55,15 +55,15 @@ The pcb-stackup converter function.
 
 <a name="Stackup"></a>
 
-## Stackup : <code>Object</code>
+## Stackup : <code>object</code>
 **Kind**: global typedef  
 **Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
-| top | <code>Object</code> | The top view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
+| top | <code>object</code> | The top view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
 | top.svg | <code>string</code> | The top SVG string. |
-| bottom | <code>Object</code> | The bottom view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
+| bottom | <code>object</code> | The bottom view SVG object, see [pcb-stackup-core docs](https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage) for full details. |
 | bottom.svg | <code>string</code> | The bottom SVG string. |
 | layers | <code>[Array.&lt;Layer&gt;](#Layer)</code> | A cache of the processed layers that can be passed back to pcbStackup. |
 

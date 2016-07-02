@@ -89,7 +89,7 @@ module.exports = pcbStackup
 
 /**
  * @typedef Layer
- * @type {Object}
+ * @type {object}
  * @property {string | NodeJS.ReadableStream} gerber The gerber data
  * @property {string} [filename] The filename so we can try and identify the
  * type of the layer. You either have to provide this or the layerType.
@@ -107,11 +107,11 @@ module.exports = pcbStackup
 
 /**
  * @typedef Stackup
- * @type {Object}
- * @property {Object} top The top view SVG object, see [pcb-stackup-core docs]{@link
+ * @type {object}
+ * @property {object} top The top view SVG object, see [pcb-stackup-core docs]{@link
  * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details.
  * @property {string} top.svg The top SVG string.
- * @property {Object} bottom The bottom view SVG object, see [pcb-stackup-core docs]{@link
+ * @property {object} bottom The bottom view SVG object, see [pcb-stackup-core docs]{@link
  * https://github.com/tracespace/pcb-stackup-core/blob/master/README.md#usage} for full details.
  * @property {string} bottom.svg The bottom SVG string.
  * @property {Array<Layer>} layers A cache of the processed layers that can be
