@@ -95,9 +95,9 @@ module.exports = pcbStackup
  * https://nodejs.org/api/stream.html#stream_readable_streams}
  * @property {string} [filename] The filename so we can try and identify the
  * type of the layer. You either have to provide this or the layerType.
- * @property {string} [layerType] The layer type, a valid layer type as given
- * by [whats-that-gerber]{@link
- * https://github.com/tracespace/whats-that-gerber#layer-types-and-names}.
+ * @property {string} [layerType] The layer type, a [valid layer type]{@link https://github.com/tracespace/whats-that-gerber#layer-types-and-names} as given
+ * by whats-that-gerber.
+ * @property {object} [options={id: shortId.generate()}] [gerber-to-svg options]{@link https://github.com/mcous/gerber-to-svg/blob/master/API.md#options}
 */
 
 /**

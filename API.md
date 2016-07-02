@@ -37,11 +37,12 @@ The pcb-stackup converter function.
 **Kind**: global typedef  
 **Properties**
 
-| Name | Type | Description |
-| --- | --- | --- |
-| gerber | <code>string</code> &#124; <code>NodeJS.ReadableStream</code> | The gerber data as a string or [ReadableStream](https://nodejs.org/api/stream.html#stream_readable_streams) |
-| filename | <code>string</code> | The filename so we can try and identify the type of the layer. You either have to provide this or the layerType. |
-| layerType | <code>string</code> | The layer type, a valid layer type as given by [whats-that-gerber](https://github.com/tracespace/whats-that-gerber#layer-types-and-names). |
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| gerber | <code>string</code> &#124; <code>NodeJS.ReadableStream</code> |  | The gerber data as a string or [ReadableStream](https://nodejs.org/api/stream.html#stream_readable_streams) |
+| filename | <code>string</code> |  | The filename so we can try and identify the type of the layer. You either have to provide this or the layerType. |
+| layerType | <code>string</code> |  | The layer type, a [valid layer type](https://github.com/tracespace/whats-that-gerber#layer-types-and-names) as given by whats-that-gerber. |
+| options | <code>object</code> | <code>{id: shortId.generate()}</code> | [gerber-to-svg options](https://github.com/mcous/gerber-to-svg/blob/master/API.md#options) |
 
 <a name="Done"></a>
 
